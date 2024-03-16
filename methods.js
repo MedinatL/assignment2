@@ -7,20 +7,31 @@ const port = '3000';
 
 
 const requestHandler = (req, res) => {
-    if(req.url === '/' && req.method === 'GET')
-        res.write("read books!");
-    
-    else if(req.url === '/books/authors' && req.method === 'POST')
-        res.write("create books!");
-    
+    if(req.url === '/books' && req.method === 'GET')
+        res.write("get books!");
 
     else if(req.url === '/books' && req.method ==='PUT')
-        res.write("update books!");
-
+        res.write("put books!");
 
     else if(req.url === '/books' && req.method === 'DELETE')
-        res.write("update books!");
+        res.write("delete books!");
+        
+    
+    else if(req.url === '/books/authors' && req.method === 'GET')
+        res.write("get books!");
+
+    else if(req.url === '/books/authors' && req.method === 'POST')
+        res.write("post books!");
+
+    else if(req.url === '/books/authors' && req.method === 'PUT')
+        res.write("put books!");
         response.end();
+
+    
+
+    
+
+    
 
 }
     
